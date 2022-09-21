@@ -27,7 +27,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -82,8 +82,770 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Caoimhe:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandIndex
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandIndex1
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandIndex2
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandPinky1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandPinky2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandPinky3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandRing1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandRing2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:LeftHandRing3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandIndex1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandIndex2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandIndex3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandThumb2
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandThumb3
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandThumb4
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandPinky1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandPinky2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandPinky3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandRing1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandRing2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:RightHandRing3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Caoimhe:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: MamboV0(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Hips
+      parentName: MamboV0(Clone)
+      position: {x: 0.004879704, y: 0.03635114, z: 0.863049}
+      rotation: {x: 0.013305576, y: -0.0031525188, z: -0.99958193, w: 0.025475694}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Spine
+      parentName: Caoimhe:Hips
+      position: {x: -0, y: 0, z: 0.09232083}
+      rotation: {x: 0.09478957, y: 0.004350622, z: -0.019710928, w: 0.99529266}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Spine1
+      parentName: Caoimhe:Spine
+      position: {x: -0, y: 0, z: 0.09232083}
+      rotation: {x: -0.035933185, y: 0.0017406084, z: -0.02011017, w: 0.99915034}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Spine2
+      parentName: Caoimhe:Spine1
+      position: {x: -0, y: 0, z: 0.09232083}
+      rotation: {x: -0.062172927, y: 0.0022685186, z: -0.02013225, w: 0.9978598}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Spine3
+      parentName: Caoimhe:Spine2
+      position: {x: -0, y: 0, z: 0.09232083}
+      rotation: {x: -0.018587707, y: 0.0031445164, z: -0.020014139, w: 0.999622}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Neck
+      parentName: Caoimhe:Spine3
+      position: {x: -0, y: 0.011869822, z: 0.11869821}
+      rotation: {x: -0.042890545, y: 0.0015848575, z: 0.028184254, w: 0.99868095}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Neck1
+      parentName: Caoimhe:Neck
+      position: {x: -0, y: 0, z: 0.050331157}
+      rotation: {x: -0.0550013, y: -0.028142303, z: 0.029477483, w: 0.99765426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:Head
+      parentName: Caoimhe:Neck1
+      position: {x: -0, y: 0, z: 0.050331157}
+      rotation: {x: 0.0588706, y: -0.07244955, z: 0.021968769, w: 0.9953908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:HeadEnd
+      parentName: Caoimhe:Head
+      position: {x: -0, y: 0, z: 0.08608818}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightShoulder
+      parentName: Caoimhe:Spine3
+      position: {x: -0, y: 0, z: 0.08308875}
+      rotation: {x: -0.015748901, y: -0.7119597, z: -0.015525755, w: 0.701872}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightArm
+      parentName: Caoimhe:RightShoulder
+      position: {x: -0, y: 0, z: 0.15048295}
+      rotation: {x: 0.06939585, y: -0.04432981, z: 0.07925806, w: 0.9934472}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightForeArm
+      parentName: Caoimhe:RightArm
+      position: {x: -0, y: 0, z: 0.2832988}
+      rotation: {x: -0.03459292, y: 0.010123208, z: 0.07885424, w: 0.9962343}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHand
+      parentName: Caoimhe:RightForeArm
+      position: {x: -0, y: 0, z: 0.22745931}
+      rotation: {x: 0.1321579, y: 0.037428953, z: -0.0051902863, w: 0.99050826}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandMiddle1
+      parentName: Caoimhe:RightHand
+      position: {x: -0, y: 0, z: 0.07852076}
+      rotation: {x: 0.027477695, y: -0.074606374, z: 0.0077598635, w: 0.9968043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandMiddle2
+      parentName: Caoimhe:RightHandMiddle1
+      position: {x: -0, y: 0, z: 0.042705227}
+      rotation: {x: 0, y: -0.0014385098, z: -0, w: 0.999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandMiddle3
+      parentName: Caoimhe:RightHandMiddle2
+      position: {x: -0, y: 0, z: 0.029668588}
+      rotation: {x: 0, y: 0.008302537, z: -0, w: 0.99996555}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandMiddle4
+      parentName: Caoimhe:RightHandMiddle3
+      position: {x: -0, y: 0, z: 0.016243951}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandRing
+      parentName: Caoimhe:RightHand
+      position: {x: -0.0025, y: -0.007494093, z: 0.0025}
+      rotation: {x: 0.05993091, y: -0.0104025975, z: -0.120481536, w: 0.99085027}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandRing1
+      parentName: Caoimhe:RightHandRing
+      position: {x: -0, y: 0, z: 0.06961899}
+      rotation: {x: 0.00006236132, y: -0.04473654, z: 0.006570258, w: 0.99897724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandRing2
+      parentName: Caoimhe:RightHandRing1
+      position: {x: -0, y: 0, z: 0.039680105}
+      rotation: {x: -0.00000066527684, y: -0.038641617, z: 0.00000007973764, w: 0.9992532}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandRing3
+      parentName: Caoimhe:RightHandRing2
+      position: {x: -0, y: 0, z: 0.026954805}
+      rotation: {x: 0, y: 0.03309951, z: -0, w: 0.99945205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandRing4
+      parentName: Caoimhe:RightHandRing3
+      position: {x: -0, y: 0, z: 0.016150596}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandPinky
+      parentName: Caoimhe:RightHandRing
+      position: {x: -0.0025, y: -0.007494093, z: 0.0025}
+      rotation: {x: 0.0572124, y: -0.007189018, z: -0.080570355, w: 0.99507964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandPinky1
+      parentName: Caoimhe:RightHandPinky
+      position: {x: -0, y: 0, z: 0.055464737}
+      rotation: {x: -0.050472047, y: -0.020001959, z: 0.010996652, w: 0.9984646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandPinky2
+      parentName: Caoimhe:RightHandPinky1
+      position: {x: -0, y: 0, z: 0.033422794}
+      rotation: {x: -0.00000035762775, y: -0.038903907, z: -0.000000051688385, w: 0.999243}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandPinky3
+      parentName: Caoimhe:RightHandPinky2
+      position: {x: -0, y: 0, z: 0.02298716}
+      rotation: {x: -0.00000033733426, y: -0.04031366, z: 0.0000000033234515, w: 0.9991871}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandPinky4
+      parentName: Caoimhe:RightHandPinky3
+      position: {x: -0, y: 0, z: 0.0148996245}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandIndex
+      parentName: Caoimhe:RightHand
+      position: {x: -0.0025, y: 0.007494093, z: 0.0025}
+      rotation: {x: -0.098824546, y: 0.0106263645, z: -0.046733852, w: 0.99395007}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandIndex1
+      parentName: Caoimhe:RightHandIndex
+      position: {x: -0, y: 0, z: 0.07778526}
+      rotation: {x: -0.22159962, y: 0.054768562, z: -0.009238787, w: 0.97355473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandIndex2
+      parentName: Caoimhe:RightHandIndex1
+      position: {x: -0, y: 0, z: 0.042641032}
+      rotation: {x: 0, y: 0.033054315, z: -0, w: 0.99945354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandIndex3
+      parentName: Caoimhe:RightHandIndex2
+      position: {x: -0, y: 0, z: 0.02557634}
+      rotation: {x: 0, y: 0.0363301, z: -0, w: 0.9993399}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandIndex4
+      parentName: Caoimhe:RightHandIndex3
+      position: {x: -0, y: 0, z: 0.0147689255}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandThumb1
+      parentName: Caoimhe:RightHandIndex
+      position: {x: -0.0075, y: 0.007494093, z: 0.0025}
+      rotation: {x: -0.20104863, y: -0.08682552, z: 0.48820463, w: 0.84480596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandThumb2
+      parentName: Caoimhe:RightHandThumb1
+      position: {x: -0, y: 0, z: 0.05236121}
+      rotation: {x: 0.23029868, y: -0.0366814, z: -0.032913398, w: 0.97187126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandThumb3
+      parentName: Caoimhe:RightHandThumb2
+      position: {x: -0, y: 0, z: 0.03367976}
+      rotation: {x: 0, y: -0.0074563054, z: -0, w: 0.9999722}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightHandThumb4
+      parentName: Caoimhe:RightHandThumb3
+      position: {x: -0, y: 0, z: 0.020230254}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftShoulder
+      parentName: Caoimhe:Spine3
+      position: {x: -0, y: 0, z: 0.08308875}
+      rotation: {x: -0.045131464, y: 0.61116636, z: 0.058194786, w: 0.78806865}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftArm
+      parentName: Caoimhe:LeftShoulder
+      position: {x: -0, y: 0, z: 0.15048295}
+      rotation: {x: 0.016764047, y: 0.1076652, z: -0.043302212, w: 0.9931023}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftForeArm
+      parentName: Caoimhe:LeftArm
+      position: {x: -0, y: 0, z: 0.2832988}
+      rotation: {x: -0.03612824, y: -0.011023801, z: -0.06309071, w: 0.99729276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHand
+      parentName: Caoimhe:LeftForeArm
+      position: {x: -0, y: 0, z: 0.22745931}
+      rotation: {x: 0.067992836, y: 0.026988104, z: -0.0018399307, w: 0.99731904}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandMiddle1
+      parentName: Caoimhe:LeftHand
+      position: {x: -0, y: 0, z: 0.08617174}
+      rotation: {x: 0.025483632, y: 0.07434298, z: -0.009180519, w: 0.99686486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandMiddle2
+      parentName: Caoimhe:LeftHandMiddle1
+      position: {x: -0, y: 0, z: 0.047094446}
+      rotation: {x: 0.00000021606668, y: 0.038037848, z: 0.00000015925605, w: 0.9992763}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandMiddle3
+      parentName: Caoimhe:LeftHandMiddle2
+      position: {x: -0, y: 0, z: 0.031197783}
+      rotation: {x: 0.0000022374866, y: 0.038386907, z: 0.00000014665491, w: 0.999263}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandMiddle4
+      parentName: Caoimhe:LeftHandMiddle3
+      position: {x: -0, y: 0, z: 0.018126575}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandRing
+      parentName: Caoimhe:LeftHand
+      position: {x: 0.0025, y: -0.0074128117, z: 0.0025}
+      rotation: {x: 0.07626877, y: 0.012089989, z: 0.107723, w: 0.99117744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandRing1
+      parentName: Caoimhe:LeftHandRing
+      position: {x: -0, y: 0, z: 0.07682654}
+      rotation: {x: -0.028752608, y: 0.055387564, z: -0.0017496546, w: 0.9980493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandRing2
+      parentName: Caoimhe:LeftHandRing1
+      position: {x: -0, y: 0, z: 0.043843515}
+      rotation: {x: -0.000000027939654, y: 0.036670607, z: -0.000000044237787, w: 0.9993274}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandRing3
+      parentName: Caoimhe:LeftHandRing2
+      position: {x: -0, y: 0, z: 0.029514534}
+      rotation: {x: -0.000000106669994, y: 0.040454563, z: -0.000000037767563, w: 0.9991814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandRing4
+      parentName: Caoimhe:LeftHandRing3
+      position: {x: -0, y: 0, z: 0.0180224}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandPinky
+      parentName: Caoimhe:LeftHandRing
+      position: {x: 0.0025, y: -0.0074128117, z: 0.0025}
+      rotation: {x: 0.084988005, y: 0.0075309263, z: 0.06533561, w: 0.99420905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandPinky1
+      parentName: Caoimhe:LeftHandPinky
+      position: {x: -0, y: 0, z: 0.06353022}
+      rotation: {x: -0.09879968, y: 0.037925214, z: 0.0011229559, w: 0.99438375}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandPinky2
+      parentName: Caoimhe:LeftHandPinky1
+      position: {x: -0, y: 0, z: 0.036143005}
+      rotation: {x: -0.0000014230606, y: 0.03711322, z: -0.000000106636406, w: 0.9993111}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandPinky3
+      parentName: Caoimhe:LeftHandPinky2
+      position: {x: -0, y: 0, z: 0.023919152}
+      rotation: {x: 0.0000005763784, y: 0.0386452, z: -5.283094e-10, w: 0.99925303}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandPinky4
+      parentName: Caoimhe:LeftHandPinky3
+      position: {x: -0, y: 0, z: 0.016626446}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandIndex
+      parentName: Caoimhe:LeftHand
+      position: {x: 0.0025, y: 0.0074128117, z: 0.0025}
+      rotation: {x: -0.081233226, y: 0.006615871, z: 0.077838816, w: 0.99362904}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandIndex1
+      parentName: Caoimhe:LeftHandIndex
+      position: {x: -0, y: 0, z: 0.0848009}
+      rotation: {x: 0.028332306, y: 0.015176827, z: -0.022070635, w: 0.9992396}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandIndex2
+      parentName: Caoimhe:LeftHandIndex1
+      position: {x: -0, y: 0, z: 0.046285424}
+      rotation: {x: 0.0000009685753, y: 0.027518455, z: 0.00000018230635, w: 0.9996214}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandIndex3
+      parentName: Caoimhe:LeftHandIndex2
+      position: {x: -0, y: 0, z: 0.027533786}
+      rotation: {x: 0, y: 0.14536661, z: -0, w: 0.98937786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandIndex4
+      parentName: Caoimhe:LeftHandIndex3
+      position: {x: -0, y: 0, z: 0.016480599}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandThumb1
+      parentName: Caoimhe:LeftHandIndex
+      position: {x: 0.0075, y: 0.0074128117, z: 0.0025}
+      rotation: {x: -0.19167209, y: 0.108210534, z: -0.5654547, w: 0.7948668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandThumb2
+      parentName: Caoimhe:LeftHandThumb1
+      position: {x: -0, y: 0, z: 0.056809563}
+      rotation: {x: 0.2171076, y: 0.027546374, z: -0.0061292234, w: 0.9757397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandThumb3
+      parentName: Caoimhe:LeftHandThumb2
+      position: {x: -0, y: 0, z: 0.03733331}
+      rotation: {x: 0, y: 0.15093277, z: -0, w: 0.98854405}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftHandThumb4
+      parentName: Caoimhe:LeftHandThumb3
+      position: {x: -0, y: 0, z: 0.02257488}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightUpLeg
+      parentName: Caoimhe:Hips
+      position: {x: -0.10381741, y: 0, z: 0}
+      rotation: {x: -0.06934428, y: -0.04751844, z: -0.013101184, w: 0.9963743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightLeg
+      parentName: Caoimhe:RightUpLeg
+      position: {x: -0, y: 0, z: -0.41277415}
+      rotation: {x: 0.059022415, y: -0, z: -0, w: 0.9982567}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightFoot
+      parentName: Caoimhe:RightLeg
+      position: {x: -0, y: 0, z: -0.39396}
+      rotation: {x: -0.117581055, y: 0.009249339, z: -0.051531438, w: 0.99168223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightToeBase
+      parentName: Caoimhe:RightFoot
+      position: {x: -0, y: 0.16888407, z: 0}
+      rotation: {x: 0.1656304, y: -0, z: -0, w: 0.9861879}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:RightToeBaseEnd
+      parentName: Caoimhe:RightToeBase
+      position: {x: -0, y: 0.035330202, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftUpLeg
+      parentName: Caoimhe:Hips
+      position: {x: 0.10381741, y: 0, z: 0}
+      rotation: {x: -0.081187055, y: 0.00942034, z: -0.011841965, w: 0.996584}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftLeg
+      parentName: Caoimhe:LeftUpLeg
+      position: {x: -0, y: 0, z: -0.41277415}
+      rotation: {x: 0.060249522, y: -0, z: -0, w: 0.99818337}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftFoot
+      parentName: Caoimhe:LeftLeg
+      position: {x: -0, y: 0, z: -0.39396}
+      rotation: {x: -0.08587424, y: 0.03224, z: 0.017722782, w: 0.9956265}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftToeBase
+      parentName: Caoimhe:LeftFoot
+      position: {x: -0, y: 0.16888407, z: 0}
+      rotation: {x: 0.10085284, y: -0, z: -0, w: 0.99490136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Caoimhe:LeftToeBaseEnd
+      parentName: Caoimhe:LeftToeBase
+      position: {x: -0, y: 0.046012916, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -96,11 +858,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a6def43180b0809438f110ea767e6bc7, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
