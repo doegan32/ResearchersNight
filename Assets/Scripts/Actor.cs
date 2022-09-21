@@ -31,14 +31,67 @@ public class Actor : MonoBehaviour
 
 	private string[] BoneNames = null;
 
+	private List<List<GameObject>> PastAvatars = new List<List<GameObject>>(); 
+
 	private void Reset() //Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode. Reset is most commonly used to give good default values in the Inspector.
 	{
 		ExtractSkeleton();
+
+
+
 	}
 
-	private void LateUpdate()
+    private void Start()
+    {
+		for (int i = 0; i < MaxHistory; i++)
+		{
+			Debug.Log("hi");
+			List<GameObject> Spheres = new List<GameObject>();
+			for (int b = 0; b < Bones.Length; b++)
+			{
+				Debug.Log("bye");
+				GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+				sphere.transform.position = Bones[b].Transform.position;
+				sphere.transform.rotation = Bones[b].Transform.rotation;
+				sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+				Spheres.Add(sphere);
+			}
+			PastAvatars.Add(Spheres);
+		}
+	}
+
+    private void OnDestroy()
+    {
+		for (int i = 0; i < MaxHistory; i++)
+        {
+			List<GameObject> Spheres = PastAvatars[0];
+			PastAvatars.RemoveAt(0);
+			for (int b = 0; b < Bones.Length; b++)
+            {
+				GameObject sphere = Spheres[0];
+				Spheres.RemoveAt(0);
+				Destroy(sphere);
+            }
+		}
+	}
+
+    private void LateUpdate()
 	{
 		SaveState();
+
+		if (History.Count >= MaxHistory)
+        {
+			for (int i = 0; i < MaxHistory; i++)
+			{
+				State state = History[i];
+				for (int b = 0; b < Bones.Length; b++)
+				{
+					PastAvatars[i][b].transform.position = state.Transformations[b].GetPosition();
+					PastAvatars[i][b].transform.rotation = state.Transformations[b].GetRotation();
+					// do something with velocities???
+				}
+			}
+		}
 	}
 	public void CopySetup(Actor reference)
 	{
