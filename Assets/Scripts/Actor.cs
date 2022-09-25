@@ -54,26 +54,44 @@ public class Actor : MonoBehaviour
 				sphere.transform.position = Bones[b].Transform.position;
 				sphere.transform.rotation = Bones[b].Transform.rotation;
 				sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+
+
+				MeshRenderer meshRenderer = sphere.GetComponent<MeshRenderer>();
+
+				//if (i == 0)
+    //            {
+				//	Material newMat = Resources.Load("Assets/Scripts/Materials/ShinyTest", typeof(Material)) as Material;
+				//	sphere.GetComponent<Renderer>().sharedMaterial = newMat;
+				//	//sphere.renderer.sharedMaterial = new Material(Shader.Find("Diffuse"));
+				//	//sphere.renderer.shared = newMat;
+				//}
+    //            if (i > 0)
+    //            {
+				//	Material newMat1 = Resources.Load("Assets/Scripts/Materials/ShinyTest1", typeof(Material)) as Material;
+				//	sphere.GetComponent<Renderer>().sharedMaterial = newMat1;
+				//}
+
+
 				Spheres.Add(sphere);
 			}
 			PastAvatars.Add(Spheres);
 		}
 	}
 
-    private void OnDestroy()
-    {
-		for (int i = 0; i < MaxHistory; i++)
-        {
-			List<GameObject> Spheres = PastAvatars[0];
-			PastAvatars.RemoveAt(0);
-			for (int b = 0; b < Bones.Length; b++)
-            {
-				GameObject sphere = Spheres[0];
-				Spheres.RemoveAt(0);
-				Destroy(sphere);
-            }
-		}
-	}
+ //   private void OnDestroy()
+ //   {
+	//	for (int i = 0; i < MaxHistory; i++)
+ //       {
+	//		List<GameObject> Spheres = PastAvatars[0];
+	//		PastAvatars.RemoveAt(0);
+	//		for (int b = 0; b < Bones.Length; b++)
+ //           {
+	//			GameObject sphere = Spheres[0];
+	//			Spheres.RemoveAt(0);
+	//			Destroy(sphere);
+ //           }
+	//	}
+	//}
 
     private void LateUpdate()
 	{
