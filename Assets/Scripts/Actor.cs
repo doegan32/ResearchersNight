@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-[ExecuteInEditMode] // what is this? Remove and see what happends
+// [ExecuteInEditMode] // what is this? Remove and see what happends
 public class Actor : MonoBehaviour
 {
 	public bool InspectSkeleton = false;
@@ -31,7 +31,25 @@ public class Actor : MonoBehaviour
 
 	private string[] BoneNames = null;
 
-	private List<List<GameObject>> PastAvatars = new List<List<GameObject>>(); 
+	private List<List<GameObject>> PastAvatars = new List<List<GameObject>>();
+	private List<GameObject> CurrentAvater = new List<GameObject>();
+
+	GameObject sphere;
+
+
+	
+	public float PastWindow = 1.0f;
+	public int NumPastPoints = 10;
+	private float Interval;
+	private System.DateTime TimeLastUpdate;
+	private bool changed = false;
+
+	public float minSize = 0.01f;
+	public float maxSize = 0.05f;
+
+	public Color StartColour = Color.blue;
+	public Color EndColour = Color.black;
+
 
 	private void Reset() //Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode. Reset is most commonly used to give good default values in the Inspector.
 	{
@@ -43,92 +61,213 @@ public class Actor : MonoBehaviour
 
     private void Start()
     {
-		for (int i = 0; i < MaxHistory; i++)
-		{
-			Debug.Log("hi");
+		//Utility.SetFPS(60);
+
+		Interval = PastWindow / (int)NumPastPoints;
+		Debug.Log(Interval);
+		TimeLastUpdate = Utility.GetTimestamp();
+
+
+		for (int b = 0; b < Bones.Length; b++)
+        {
+		
+			GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+			sphere.name = "Sphere_0" + "_" + b.ToString();
+			sphere.transform.position = Bones[b].Transform.position;
+            sphere.transform.rotation = Bones[b].Transform.rotation;
+            sphere.transform.localScale = new Vector3(maxSize, maxSize, maxSize);
+			CurrentAvater.Add(sphere);
+
+			var cubeRenderer = sphere.GetComponent<Renderer>();
+			
+			cubeRenderer.material.SetColor("_Color", StartColour);
+
+
+		}
+
+        //Debug.Log(CurrentAvater.Count);
+        //for (int b = 0; b < Bones.Length; b++)
+        //{
+        //    TrailRenderer trailRenderer = CurrentAvater[b].AddComponent<TrailRenderer>();
+        //    trailRenderer.time = 1.0f;
+        //}
+
+
+
+
+        for (int i = 0; i < NumPastPoints; i++)
+        {
+			float scale = ((float)i / (float)NumPastPoints) * maxSize + (((float)NumPastPoints - (float)i) / (float)NumPastPoints) * minSize;
+			Color customColor = Color.Lerp(EndColour, StartColour, (float)i / (float)NumPastPoints);
+			Debug.Log(scale);
+
 			List<GameObject> Spheres = new List<GameObject>();
-			for (int b = 0; b < Bones.Length; b++)
-			{
-				Debug.Log("bye");
-				GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-				sphere.transform.position = Bones[b].Transform.position;
-				sphere.transform.rotation = Bones[b].Transform.rotation;
-				sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+            for (int b = 0; b < Bones.Length; b++)
+            {
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                sphere.name = "Sphere_" + i.ToString() + "_" + b.ToString();
+                sphere.transform.position = Bones[b].Transform.position;
+                sphere.transform.rotation = Bones[b].Transform.rotation;
 
+				
+				
+                //sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+				sphere.transform.localScale = new Vector3(scale, scale, scale);
 
-				MeshRenderer meshRenderer = sphere.GetComponent<MeshRenderer>();
-
-				//if (i == 0)
-    //            {
-				//	Material newMat = Resources.Load("Assets/Scripts/Materials/ShinyTest", typeof(Material)) as Material;
-				//	sphere.GetComponent<Renderer>().sharedMaterial = newMat;
-				//	//sphere.renderer.sharedMaterial = new Material(Shader.Find("Diffuse"));
-				//	//sphere.renderer.shared = newMat;
-				//}
-    //            if (i > 0)
-    //            {
-				//	Material newMat1 = Resources.Load("Assets/Scripts/Materials/ShinyTest1", typeof(Material)) as Material;
-				//	sphere.GetComponent<Renderer>().sharedMaterial = newMat1;
-				//}
-
+				var cubeRenderer = sphere.GetComponent<Renderer>();
+				
+				cubeRenderer.material.SetColor("_Color", customColor);
 
 				Spheres.Add(sphere);
-			}
-			PastAvatars.Add(Spheres);
-		}
-	}
+            }
+            PastAvatars.Add(Spheres);
+        }
+        //{
+        //    Debug.Log("hi");
+        //    List<GameObject> Spheres = new List<GameObject>();
+        //    for (int b = 0; b < Bones.Length; b++)
+        //    {
+        //        Debug.Log("bye");
+        //        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //        sphere.transform.position = Bones[b].Transform.position;
+        //        sphere.transform.rotation = Bones[b].Transform.rotation;
+        //        sphere.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
 
- //   private void OnDestroy()
- //   {
-	//	for (int i = 0; i < MaxHistory; i++)
- //       {
-	//		List<GameObject> Spheres = PastAvatars[0];
-	//		PastAvatars.RemoveAt(0);
-	//		for (int b = 0; b < Bones.Length; b++)
- //           {
-	//			GameObject sphere = Spheres[0];
-	//			Spheres.RemoveAt(0);
-	//			Destroy(sphere);
- //           }
-	//	}
-	//}
+
+        //        MeshRenderer meshRenderer = sphere.GetComponent<MeshRenderer>();
+
+        //        //if (i == 0)
+        //        //            {
+        //        //	Material newMat = Resources.Load("Assets/Scripts/Materials/ShinyTest", typeof(Material)) as Material;
+        //        //	sphere.GetComponent<Renderer>().sharedMaterial = newMat;
+        //        //	//sphere.renderer.sharedMaterial = new Material(Shader.Find("Diffuse"));
+        //        //	//sphere.renderer.shared = newMat;
+        //        //}
+        //        //            if (i > 0)
+        //        //            {
+        //        //	Material newMat1 = Resources.Load("Assets/Scripts/Materials/ShinyTest1", typeof(Material)) as Material;
+        //        //	sphere.GetComponent<Renderer>().sharedMaterial = newMat1;
+        //        //}
+
+
+        //        Spheres.Add(sphere);
+        //    }
+        //    PastAvatars.Add(Spheres);
+        //}
+        //sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+    }
+
+
+	private void OnDIsable()
+    {
+		//for (int i = 0; i < MaxHistory; i++)
+		//{
+		//    List<GameObject> Spheres = PastAvatars[0];
+		//    PastAvatars.RemoveAt(0);
+		//    for (int b = 0; b < Bones.Length; b++)
+		//    {
+		//        GameObject sphere = Spheres[0];
+		//        Spheres.RemoveAt(0);
+		//        Destroy(sphere.transform.gameObject);
+		//    }
+		//}
+		//Destroy(sphere.transform.gameObject);
+	}
 
     private void LateUpdate()
 	{
+        // does this work for updating as required . . .  .
+        //float ElapsedTime = (float)Utility.GetElapsedTime(TimeLastUpdate);
+
+        //if (ElapsedTime >= Interval)
+        //{
+
+        //    TimeLastUpdate = Utility.GetTimestamp();
+        //    SaveState();
+        //    //changed = true;
+        //}
+        //else
+        //{
+
+        //    changed = false;
+        //}
+
 		SaveState();
 
-		if (History.Count >= MaxHistory)
-        {
-			for (int i = 0; i < MaxHistory; i++)
-			{
-				State state = History[i];
-				for (int b = 0; b < Bones.Length; b++)
-				{
-					PastAvatars[i][b].transform.position = state.Transformations[b].GetPosition();
-					PastAvatars[i][b].transform.rotation = state.Transformations[b].GetRotation();
-					// do something with velocities???
-				}
-			}
-		}
+        //for (int i = 0; i < MaxHistory; i++)
+        //{
+        //    State state = History[i];
+        //    for (int b = 0; b < Bones.Length; b++)
+        //    {
+        //        PastAvatars[i][b].transform.position = state.Transformations[b].GetPosition();
+        //        PastAvatars[i][b].transform.rotation = state.Transformations[b].GetRotation();
+        //        // do something with velocities???
+        //    }
+        //}
+
+  //      for (int b = 0; b < Bones.Length; b++)
+		//{
+		//	CurrentAvater[b].transform.position = Bones[b].Transform.position; 
+		//	CurrentAvater[b].transform.rotation = Bones[b].Transform.rotation; 
+		//	// do something with velocities???
+		//}
+
+
 	}
-	public void CopySetup(Actor reference)
+
+    private void Update()
+    {
+
+		for (int b = 0; b < Bones.Length; b++)
+		{
+			CurrentAvater[b].transform.position = Bones[b].Transform.position;
+			CurrentAvater[b].transform.rotation = Bones[b].Transform.rotation;
+			// do something with velocities???
+		}
+
+
+		//if (changed)
+  //      {
+            for (int i = 0; i < History.Count; i++)
+            {
+                State state = History[i];
+                for (int b = 0; b < Bones.Length; b++)
+                {
+                    PastAvatars[i][b].transform.position = state.Transformations[b].GetPosition();
+                    PastAvatars[i][b].transform.rotation = state.Transformations[b].GetRotation();
+                    // do something with velocities???
+                }
+            }
+       // }
+
+
+
+
+
+
+    }
+
+
+    public void CopySetup(Actor reference)
 	{
 		ExtractSkeleton(reference.GetBoneNames());
 	}
 
 	public void SaveState()
 	{
-		if (MaxHistory > 0.0)
+		if (NumPastPoints > 0.0)
 		{
 			State state = new State();
 			state.Transformations = GetBoneTransformations();
 			state.Velocities = GetBoneVelocities();
 			History.Add(state);
 		}
-		if (History.Count > MaxHistory)
+		if (History.Count > NumPastPoints)
         {
 			History.RemoveAt(0);
         }
+
 	}
 
 	public Transform GetRoot()
@@ -673,7 +812,14 @@ public class Actor : MonoBehaviour
         {
             Undo.RecordObject(Target, Target.name); // not sure what this does file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Undo.RecordObject.html
 
-            Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
+			Target.PastWindow = EditorGUILayout.Slider("Window Length (seconds)", Target.PastWindow, 0.0f, 10.0f);
+			Target.NumPastPoints = EditorGUILayout.IntSlider("Number of steps", Target.NumPastPoints, 1, 50);
+			EditorGUILayout.LabelField("Time interval (seconds)", Target.Interval.ToString());
+
+			Target.minSize = EditorGUILayout.Slider("min sphere size", Target.minSize, 0.0f, 1.0f);
+			Target.maxSize = EditorGUILayout.Slider("max sphere size", Target.maxSize, 0.0f, 1.0f);
+
+			Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
             Target.DrawSkeleton = EditorGUILayout.Toggle("Draw Skeleton", Target.DrawSkeleton);
 			Target.DrawSketch = EditorGUILayout.Toggle("Draw Sketch", Target.DrawSketch);
 			Target.DrawTransforms = EditorGUILayout.Toggle("Draw Transforms", Target.DrawTransforms);
@@ -706,8 +852,8 @@ public class Actor : MonoBehaviour
 					}
 					EditorGUILayout.EndHorizontal();
 					Target.BoneSize = EditorGUILayout.FloatField("Bone size", Target.BoneSize);
-                    Target.JointColor = EditorGUILayout.ColorField("Joint color", Target.JointColor);
-                    Target.BoneColor = EditorGUILayout.ColorField("Bone color", Target.BoneColor);
+                    Target.StartColour = EditorGUILayout.ColorField("StartColour", Target.StartColour);
+                    Target.EndColour = EditorGUILayout.ColorField("End color", Target.EndColour);
                     InspectSkeleton(Target.GetRoot(), 0);
                 }
             }
