@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 5438065644932374303}
-    m_Position: {x: 310, y: 190, z: 0}
+    m_State: {fileID: 5566864926140396896}
+    m_Position: {x: 182, y: 255, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,7 +21,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 5438065644932374303}
+  m_DefaultState: {fileID: 5566864926140396896}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -44,14 +44,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &5438065644932374303
+--- !u!1102 &5566864926140396896
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SittingAtThePianoV0_mcp
+  m_Name: chr00
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6256502822839870646, guid: 266d8e52c3671284f90e293c610d650b, type: 3}
+  m_Motion: {fileID: -4092633118735577736, guid: c57be8b4f7e4a2046944f4b26eba6e63, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

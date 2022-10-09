@@ -61,7 +61,7 @@ public class Actor : MonoBehaviour
 
     private void Start()
     {
-		//Utility.SetFPS(60);
+		
 
 		Interval = PastWindow / (int)NumPastPoints;
 		Debug.Log(Interval);
@@ -218,7 +218,7 @@ public class Actor : MonoBehaviour
 
     private void Update()
     {
-
+		Utility.SetFPS(90);
 		for (int b = 0; b < Bones.Length; b++)
 		{
 			CurrentAvater[b].transform.position = Bones[b].Transform.position;
