@@ -834,7 +834,7 @@ public class ActorParticles : MonoBehaviour
 				}
 				if (Target.InspectSkeleton)
 				{
-					ActorParticles reference = (ActorParticles)EditorGUILayout.ObjectField("Reference", null, typeof(Actor), true);
+					ActorParticles reference = (ActorParticles)EditorGUILayout.ObjectField("Reference", null, typeof(ActorParticles), true);
 					if (reference != null)
 					{
 						Target.CopySetup(reference);
