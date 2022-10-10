@@ -6,8 +6,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-// [ExecuteInEditMode] // what is this? Remove and see what happends
-public class Actor : MonoBehaviour
+public class ActorParticles : MonoBehaviour
 {
 	public bool InspectSkeleton = false;
 
@@ -245,8 +244,7 @@ public class Actor : MonoBehaviour
 
     }
 
-
-    public void CopySetup(Actor reference)
+	public void CopySetup(ActorParticles reference)
 	{
 		ExtractSkeleton(reference.GetBoneNames());
 	}
@@ -261,9 +259,9 @@ public class Actor : MonoBehaviour
 			History.Add(state);
 		}
 		if (History.Count > NumPastPoints)
-        {
+		{
 			History.RemoveAt(0);
-        }
+		}
 
 	}
 
@@ -460,7 +458,7 @@ public class Actor : MonoBehaviour
 	{
 		Matrix4x4[] transformations = new Matrix4x4[bones.Length];
 		for (int i = 0; i < bones.Length; i++)
-        {
+		{
 			transformations[i] = GetBoneTransformation(bones[i]);
 
 		}
@@ -468,9 +466,9 @@ public class Actor : MonoBehaviour
 	}
 
 	public Matrix4x4 GetBoneTransformation(string bone)
-    {
+	{
 		return FindBone(bone).Transform.GetWorldMatrix();
-    }
+	}
 
 	public void SetBoneVelocities(Vector3[] values)
 	{
@@ -488,14 +486,14 @@ public class Actor : MonoBehaviour
 	}
 
 	public Vector3[] GetBoneVelocities()
-    {
+	{
 		Vector3[] velocities = new Vector3[Bones.Length];
 		for (int i = 0; i < Bones.Length; i++)
-        {
+		{
 			velocities[i] = Bones[i].Velocity;
-        }
+		}
 		return velocities;
-    }
+	}
 
 	public Vector3[] GetBoneVelocities(params string[] bones)
 	{
@@ -543,7 +541,7 @@ public class Actor : MonoBehaviour
 	}
 
 	public Bone[] GetRootBones()
-    {
+	{
 		List<Bone> bones = new List<Bone>();
 		for (int i = 0; i < Bones.Length; i++)
 		{
@@ -556,7 +554,7 @@ public class Actor : MonoBehaviour
 	}
 
 	public void Draw()
-    {
+	{
 		UltiDraw.Begin();
 		if (DrawRoot)
 		{
@@ -738,29 +736,29 @@ public class Actor : MonoBehaviour
 	}
 
 	private void OnRenderObject()
-    {
+	{
 		Draw();
-    }
+	}
 
 
 	public class State
-    {
+	{
 		public Matrix4x4[] Transformations;
 		public Vector3[] Velocities;
-    }
+	}
 
-    [Serializable]
+	[Serializable]
 	public class Bone
 	{
 		public Color Color;
-		public Actor Actor;
+		public ActorParticles Actor;
 		public Transform Transform;
 		public Vector3 Velocity;
 		public int Index;
 		public int Parent;
 		public int[] Childs;
 
-		public Bone(Actor actor, Transform transform, int index)
+		public Bone(ActorParticles actor, Transform transform, int index)
 		{
 			Color = UltiDraw.None;
 			Actor = actor;
@@ -792,22 +790,22 @@ public class Actor : MonoBehaviour
 		}
 	}
 
-	#if UNITY_EDITOR // what does this do?
-    // file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Editor.html
-    // https://docs.unity3d.com/2020.3/Documentation/Manual/editor-CustomEditors.html
-    [CustomEditor(typeof(Actor))]
-    public class ActorEditor : Editor
-    {
-        public Actor Target;
+#if UNITY_EDITOR // what does this do?
+	// file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Editor.html
+	// https://docs.unity3d.com/2020.3/Documentation/Manual/editor-CustomEditors.html
+	[CustomEditor(typeof(ActorParticles))]
+	public class ActorParticlesEditor : Editor
+	{
+		public ActorParticles Target;
 
-        private void Awake()
-        {
-            Target = (Actor)target;
-        }
+		private void Awake()
+		{
+			Target = (ActorParticles)target;
+		}
 
-        public override void OnInspectorGUI()
-        {
-            Undo.RecordObject(Target, Target.name); // not sure what this does file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Undo.RecordObject.html
+		public override void OnInspectorGUI()
+		{
+			Undo.RecordObject(Target, Target.name); // not sure what this does file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Undo.RecordObject.html
 
 			Target.PastWindow = EditorGUILayout.Slider("Window Length (seconds)", Target.PastWindow, 0.0f, 10.0f);
 			Target.NumPastPoints = EditorGUILayout.IntSlider("Number of steps", Target.NumPastPoints, 1, 50);
@@ -817,26 +815,26 @@ public class Actor : MonoBehaviour
 			Target.maxSize = EditorGUILayout.Slider("max sphere size", Target.maxSize, 0.0f, 1.0f);
 
 			Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
-            Target.DrawSkeleton = EditorGUILayout.Toggle("Draw Skeleton", Target.DrawSkeleton);
+			Target.DrawSkeleton = EditorGUILayout.Toggle("Draw Skeleton", Target.DrawSkeleton);
 			Target.DrawSketch = EditorGUILayout.Toggle("Draw Sketch", Target.DrawSketch);
 			Target.DrawTransforms = EditorGUILayout.Toggle("Draw Transforms", Target.DrawTransforms);
-            Target.DrawVelocities = EditorGUILayout.Toggle("Draw Velocities", Target.DrawVelocities);
-            Target.DrawHistory = EditorGUILayout.Toggle("Draw History", Target.DrawHistory);
+			Target.DrawVelocities = EditorGUILayout.Toggle("Draw Velocities", Target.DrawVelocities);
+			Target.DrawHistory = EditorGUILayout.Toggle("Draw History", Target.DrawHistory);
 
 			Target.MaxHistory = EditorGUILayout.IntField("Max History", Target.MaxHistory);
 			Target.Sampling = EditorGUILayout.IntField("Sampling", Target.Sampling);
 
 			Utility.SetGUIColor(Color.grey);
-            using (new EditorGUILayout.VerticalScope("box")) // https://docs.unity3d.com/2020.3/Documentation/ScriptReference/GUILayout.VerticalScope.html
-            {
-                Utility.ResetGUIColor();
-                if (Utility.GUIButton("Skeleton", UltiDraw.DarkGrey, UltiDraw.White))
-                {
-                    Target.InspectSkeleton = !Target.InspectSkeleton;
-                }
-                if (Target.InspectSkeleton)
-                {
-					Actor reference = (Actor)EditorGUILayout.ObjectField("Reference", null, typeof(Actor), true);
+			using (new EditorGUILayout.VerticalScope("box")) // https://docs.unity3d.com/2020.3/Documentation/ScriptReference/GUILayout.VerticalScope.html
+			{
+				Utility.ResetGUIColor();
+				if (Utility.GUIButton("Skeleton", UltiDraw.DarkGrey, UltiDraw.White))
+				{
+					Target.InspectSkeleton = !Target.InspectSkeleton;
+				}
+				if (Target.InspectSkeleton)
+				{
+					ActorParticles reference = (ActorParticles)EditorGUILayout.ObjectField("Reference", null, typeof(Actor), true);
 					if (reference != null)
 					{
 						Target.CopySetup(reference);
@@ -849,69 +847,68 @@ public class Actor : MonoBehaviour
 					}
 					EditorGUILayout.EndHorizontal();
 					Target.BoneSize = EditorGUILayout.FloatField("Bone size", Target.BoneSize);
-                    Target.StartColour = EditorGUILayout.ColorField("StartColour", Target.StartColour);
-                    Target.EndColour = EditorGUILayout.ColorField("End color", Target.EndColour);
-                    InspectSkeleton(Target.GetRoot(), 0);
-                }
-            }
-            
+					Target.StartColour = EditorGUILayout.ColorField("StartColour", Target.StartColour);
+					Target.EndColour = EditorGUILayout.ColorField("End color", Target.EndColour);
+					InspectSkeleton(Target.GetRoot(), 0);
+				}
+			}
+
 			if (GUI.changed) // not sure of this loop's purpose
-            {
-                EditorUtility.SetDirty(Target);
-            }
-        }
+			{
+				EditorUtility.SetDirty(Target);
+			}
+		}
 
-        private void InspectSkeleton(Transform transform, int indent) // not 100% sure on exactly how everything here is working
-        {
-            float indentSpace = 5.0f;
-            Bone bone = Target.FindBone(transform.name);
-            Utility.SetGUIColor(bone == null ? UltiDraw.LightGrey : UltiDraw.Mustard);
+		private void InspectSkeleton(Transform transform, int indent) // not 100% sure on exactly how everything here is working
+		{
+			float indentSpace = 5.0f;
+			Bone bone = Target.FindBone(transform.name);
+			Utility.SetGUIColor(bone == null ? UltiDraw.LightGrey : UltiDraw.Mustard);
 
-            using (new EditorGUILayout.HorizontalScope("Box"))
-            {
-                Utility.ResetGUIColor();
-                EditorGUILayout.BeginHorizontal();
-                for (int i = 0; i < indent; i++)
-                {
-                    EditorGUILayout.LabelField("|", GUILayout.Width(indentSpace));
-                }
-                EditorGUILayout.LabelField("-", GUILayout.Width(indentSpace));
-                EditorGUILayout.LabelField(transform.name, GUILayout.Width(400f - indent * indentSpace));
-                GUILayout.FlexibleSpace();
-                if (bone != null)
-                {
-                    EditorGUILayout.LabelField("Index: " + bone.Index.ToString(), GUILayout.Width(60f));
-                    EditorGUILayout.LabelField("Length: " + bone.GetLength().ToString("F3"), GUILayout.Width(90f));
-                    bone.Color = EditorGUILayout.ColorField(bone.Color);
-                }
-                if (Utility.GUIButton("Bone", bone == null ? UltiDraw.White : UltiDraw.DarkGrey, bone == null ? UltiDraw.DarkGrey : UltiDraw.White))
-                {
-                    Transform[] bones = new Transform[Target.Bones.Length];
-                    for (int i = 0; i < bones.Length; i++)
-                    {
-                        bones[i] = Target.Bones[i].Transform;
-                    }
-                    if (bone == null)
-                    {
-                        ArrayExtensions.Append(ref bones, transform);
-                        Target.ExtractSkeleton(bones);
-                    }
-                    else
-                    {
-                        ArrayExtensions.Remove(ref bones, transform);
-                        Target.ExtractSkeleton(bones);
-                    }
-                }
-                EditorGUILayout.EndHorizontal();
-            }
+			using (new EditorGUILayout.HorizontalScope("Box"))
+			{
+				Utility.ResetGUIColor();
+				EditorGUILayout.BeginHorizontal();
+				for (int i = 0; i < indent; i++)
+				{
+					EditorGUILayout.LabelField("|", GUILayout.Width(indentSpace));
+				}
+				EditorGUILayout.LabelField("-", GUILayout.Width(indentSpace));
+				EditorGUILayout.LabelField(transform.name, GUILayout.Width(400f - indent * indentSpace));
+				GUILayout.FlexibleSpace();
+				if (bone != null)
+				{
+					EditorGUILayout.LabelField("Index: " + bone.Index.ToString(), GUILayout.Width(60f));
+					EditorGUILayout.LabelField("Length: " + bone.GetLength().ToString("F3"), GUILayout.Width(90f));
+					bone.Color = EditorGUILayout.ColorField(bone.Color);
+				}
+				if (Utility.GUIButton("Bone", bone == null ? UltiDraw.White : UltiDraw.DarkGrey, bone == null ? UltiDraw.DarkGrey : UltiDraw.White))
+				{
+					Transform[] bones = new Transform[Target.Bones.Length];
+					for (int i = 0; i < bones.Length; i++)
+					{
+						bones[i] = Target.Bones[i].Transform;
+					}
+					if (bone == null)
+					{
+						ArrayExtensions.Append(ref bones, transform);
+						Target.ExtractSkeleton(bones);
+					}
+					else
+					{
+						ArrayExtensions.Remove(ref bones, transform);
+						Target.ExtractSkeleton(bones);
+					}
+				}
+				EditorGUILayout.EndHorizontal();
+			}
 
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                InspectSkeleton(transform.GetChild(i), indent + 1);
-            }
-        }
-    }
+			for (int i = 0; i < transform.childCount; i++)
+			{
+				InspectSkeleton(transform.GetChild(i), indent + 1);
+			}
+		}
+	}
 #endif
-
 
 }
