@@ -746,6 +746,7 @@ public class ActorParticles : MonoBehaviour
 					{
 						ArrayExtensions.Append(ref bones, transform);
 						Target.ExtractSkeleton(bones);
+
 					}
 					else
 					{
