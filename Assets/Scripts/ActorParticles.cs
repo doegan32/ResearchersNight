@@ -51,32 +51,47 @@ public class ActorParticles : MonoBehaviour
 
 
 
-	public GameObject ParticalSystemPrefab;
-	private List<GameObject> ParticalSystems = new List<GameObject>();
+	public GameObject ParticleSystemsPrefab;
+	private List<GameObject> ParticleSystems = new List<GameObject>();
 
 	private void Reset() //Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode. Reset is most commonly used to give good default values in the Inspector.
 	{
 		ExtractSkeleton();
-
-
-
-
 	}
 
     private void Start()
     {
 		for (int b = 0; b < Bones.Length; b++)
 		{
-			ParticalSystems.Add(Instantiate(ParticalSystemPrefab, Bones[b].Transform));
+			ParticleSystems.Add(Instantiate(ParticleSystemsPrefab, Bones[b].Transform));
+			ParticleSystem PS = ParticleSystems[b].GetComponent<ParticleSystem>();
+			var sc = PS.main;
+
+            Gradient grad = new Gradient();
+            GradientColorKey[] colorKey = new GradientColorKey[2];
+            GradientAlphaKey[] alphaKey;
+
+            grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.magenta, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
+
+            sc.startLifetime = 2.0f;
+			sc.startColor = grad;
+
+
+			//var col = PS.colorOverLifetime;
+			//grad = new Gradient();
+			//grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.blue, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
+			//col.color = grad;
 		}
+
+
 	}
 
     private void Update()
     {
 		for (int b = 0; b < Bones.Length; b++)
 		{
-			ParticalSystems[b].transform.position = Bones[b].Transform.position;
-			ParticalSystems[b].transform.rotation = Bones[b].Transform.rotation;
+			ParticleSystems[b].transform.position = Bones[b].Transform.position;
+			ParticleSystems[b].transform.rotation = Bones[b].Transform.rotation;
 		}
 	}
 
@@ -650,7 +665,7 @@ public class ActorParticles : MonoBehaviour
 			Undo.RecordObject(Target, Target.name); // not sure what this does file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Undo.RecordObject.html
 
 
-			Target.ParticalSystemPrefab = (GameObject)EditorGUILayout.ObjectField(Target.ParticalSystemPrefab, typeof(GameObject), true);
+			Target.ParticleSystemsPrefab = (GameObject)EditorGUILayout.ObjectField(Target.ParticleSystemsPrefab, typeof(GameObject), true);
 
 			Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
 			Target.DrawSkeleton = EditorGUILayout.Toggle("Draw Skeleton", Target.DrawSkeleton);
