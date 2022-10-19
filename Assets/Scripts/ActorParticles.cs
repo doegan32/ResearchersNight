@@ -30,70 +30,77 @@ public class ActorParticles : MonoBehaviour
 
 	private string[] BoneNames = null;
 
-	//private List<List<GameObject>> PastAvatars = new List<List<GameObject>>();
-	//private List<GameObject> CurrentAvater = new List<GameObject>();
+    //private List<List<GameObject>> PastAvatars = new List<List<GameObject>>();
+    //private List<GameObject> CurrentAvater = new List<GameObject>();
 
-	//GameObject sphere;
-
-
-
-	//public float PastWindow = 1.0f;
-	//public int NumPastPoints = 10;
-	//private float Interval;
-	//private System.DateTime TimeLastUpdate;
-	//private bool changed = false;
-
-	//public float minSize = 0.01f;
-	//public float maxSize = 0.05f;
-
-	//public Color StartColour = Color.blue;
-	//public Color EndColour = Color.black;
+    //GameObject sphere;
 
 
 
-	public GameObject ParticleSystemsPrefab;
-	private List<GameObject> ParticleSystems = new List<GameObject>();
+    //public float PastWindow = 1.0f;
+    //public int NumPastPoints = 10;
+    //private float Interval;
+    //private System.DateTime TimeLastUpdate;
+    //private bool changed = false;
 
-	private void Reset() //Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode. Reset is most commonly used to give good default values in the Inspector.
+    //public float minSize = 0.01f;
+    //public float maxSize = 0.05f;
+
+    //public Color StartColour = Color.blue;
+    //public Color EndColour = Color.black;
+
+
+
+    public GameObject ParticleSystemsPrefab;
+    public List<GameObject> ParticleSystems = new List<GameObject>();
+
+    private void Reset() //Reset is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode. Reset is most commonly used to give good default values in the Inspector.
 	{
+		//ParticleSystemsPrefab = Resources.Load<GameObject>("Prefabs/ParticleSystems/PS1");
 		ExtractSkeleton();
-	}
+   //     for (int b = 0; b < Bones.Length; b++)
+   //     {
+   //         ParticleSystems.Add(Instantiate(ParticleSystemsPrefab, Bones[b].Transform));
+			//ParticleSystems[b].GetComponent<ParticleSystemInfo>().name = Bones[b].GetName();
+   //     }
+    }
 
-    private void Start()
+	private void Start()
     {
 		for (int b = 0; b < Bones.Length; b++)
 		{
 			ParticleSystems.Add(Instantiate(ParticleSystemsPrefab, Bones[b].Transform));
-			ParticleSystem PS = ParticleSystems[b].GetComponent<ParticleSystem>();
-			var sc = PS.main;
-
-            Gradient grad = new Gradient();
-            GradientColorKey[] colorKey = new GradientColorKey[2];
-            GradientAlphaKey[] alphaKey;
-
-            grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.magenta, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
-
-            sc.startLifetime = 2.0f;
-			sc.startColor = grad;
-
-
-			//var col = PS.colorOverLifetime;
-			//grad = new Gradient();
-			//grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.blue, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
-			//col.color = grad;
 		}
+            //	ParticleSystem PS = ParticleSystems[b].GetComponent<ParticleSystem>();
+            //	var sc = PS.main;
+
+            //          Gradient grad = new Gradient();
+            //          GradientColorKey[] colorKey = new GradientColorKey[2];
+            //          GradientAlphaKey[] alphaKey;
+
+            //          grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.green, 0.0f), new GradientColorKey(Color.magenta, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
+
+            //          sc.startLifetime = 2.0f;
+            //	sc.startColor = grad;
 
 
-	}
+            //	//var col = PS.colorOverLifetime;
+            //	//grad = new Gradient();
+            //	//grad.SetKeys(new GradientColorKey[2] { new GradientColorKey(Color.red, 0.0f), new GradientColorKey(Color.blue, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
+            //	//col.color = grad;
+            //}
+
+
+        }
 
     private void Update()
     {
-		for (int b = 0; b < Bones.Length; b++)
-		{
-			ParticleSystems[b].transform.position = Bones[b].Transform.position;
-			ParticleSystems[b].transform.rotation = Bones[b].Transform.rotation;
-		}
-	}
+        for (int b = 0; b < Bones.Length; b++)
+        {
+            ParticleSystems[b].transform.position = Bones[b].Transform.position;
+            ParticleSystems[b].transform.rotation = Bones[b].Transform.rotation;
+        }
+    }
 
     private void LateUpdate()
 	{
@@ -615,6 +622,12 @@ public class ActorParticles : MonoBehaviour
 		public int Parent;
 		public int[] Childs;
 
+		public Color Color1 = Color.blue;
+		public Color Color2 = Color.green;
+		public Color Color3 = Color.red;
+		public Color Color4 = Color.magenta;	
+		public float startSize = 0.1f;
+
 		public Bone(ActorParticles actor, Transform transform, int index)
 		{
 			Color = UltiDraw.None;
@@ -665,17 +678,22 @@ public class ActorParticles : MonoBehaviour
 			Undo.RecordObject(Target, Target.name); // not sure what this does file:///C:/Program%20Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/Documentation/en/ScriptReference/Undo.RecordObject.html
 
 
-			Target.ParticleSystemsPrefab = (GameObject)EditorGUILayout.ObjectField(Target.ParticleSystemsPrefab, typeof(GameObject), true);
+            Target.ParticleSystemsPrefab = (GameObject)EditorGUILayout.ObjectField("Base Particle System", Target.ParticleSystemsPrefab, typeof(GameObject), true);
 
-			Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
+            //for (int i = 0; i < Target.ParticleSystems.Count; i++)
+            //{
+            //    Target.ParticleSystems[i].GetComponent<ParticleSystemInfo>().Inspector();
+            //}
+
+            //Target.DrawRoot = EditorGUILayout.Toggle("Draw Root", Target.DrawRoot);
 			Target.DrawSkeleton = EditorGUILayout.Toggle("Draw Skeleton", Target.DrawSkeleton);
-			Target.DrawSketch = EditorGUILayout.Toggle("Draw Sketch", Target.DrawSketch);
-			Target.DrawTransforms = EditorGUILayout.Toggle("Draw Transforms", Target.DrawTransforms);
-			Target.DrawVelocities = EditorGUILayout.Toggle("Draw Velocities", Target.DrawVelocities);
-			Target.DrawHistory = EditorGUILayout.Toggle("Draw History", Target.DrawHistory);
+			//Target.DrawSketch = EditorGUILayout.Toggle("Draw Sketch", Target.DrawSketch);
+			//Target.DrawTransforms = EditorGUILayout.Toggle("Draw Transforms", Target.DrawTransforms);
+			//Target.DrawVelocities = EditorGUILayout.Toggle("Draw Velocities", Target.DrawVelocities);
+			//Target.DrawHistory = EditorGUILayout.Toggle("Draw History", Target.DrawHistory);
 
-			Target.MaxHistory = EditorGUILayout.IntField("Max History", Target.MaxHistory);
-			Target.Sampling = EditorGUILayout.IntField("Sampling", Target.Sampling);
+			//Target.MaxHistory = EditorGUILayout.IntField("Max History", Target.MaxHistory);
+			//Target.Sampling = EditorGUILayout.IntField("Sampling", Target.Sampling);
 
 			Utility.SetGUIColor(Color.grey);
 			using (new EditorGUILayout.VerticalScope("box")) // https://docs.unity3d.com/2020.3/Documentation/ScriptReference/GUILayout.VerticalScope.html
@@ -687,11 +705,11 @@ public class ActorParticles : MonoBehaviour
 				}
 				if (Target.InspectSkeleton)
 				{
-					ActorParticles reference = (ActorParticles)EditorGUILayout.ObjectField("Reference", null, typeof(ActorParticles), true);
-					if (reference != null)
-					{
-						Target.CopySetup(reference);
-					}
+					///ActorParticles reference = (ActorParticles)EditorGUILayout.ObjectField("Reference", null, typeof(ActorParticles), true);
+					//if (reference != null)
+					//{
+					//	Target.CopySetup(reference);
+					//}
 					EditorGUILayout.BeginHorizontal();
 					EditorGUILayout.LabelField("Bones: " + Target.Bones.Length);
 					if (Utility.GUIButton("Clear", UltiDraw.DarkGrey, UltiDraw.White))
@@ -700,7 +718,7 @@ public class ActorParticles : MonoBehaviour
 					}
 					EditorGUILayout.EndHorizontal();
 					Target.BoneSize = EditorGUILayout.FloatField("Bone Size", Target.BoneSize);
-					Target.JointColor = EditorGUILayout.ColorField("Joint Color", Target.JointColor);
+					Target.JointColor = EditorGUILayout.ColorField(" Color", Target.JointColor);
 					Target.BoneColor = EditorGUILayout.ColorField("Bone Color", Target.BoneColor);
 					InspectSkeleton(Target.GetRoot(), 0);
 				}
@@ -718,7 +736,8 @@ public class ActorParticles : MonoBehaviour
 			Bone bone = Target.FindBone(transform.name);
 			Utility.SetGUIColor(bone == null ? UltiDraw.LightGrey : UltiDraw.Mustard);
 
-			using (new EditorGUILayout.HorizontalScope("Box"))
+			//using (new EditorGUILayout.HorizontalScope("Box"))
+			using (new EditorGUILayout.VerticalScope("Box"))
 			{
 				Utility.ResetGUIColor();
 				EditorGUILayout.BeginHorizontal();
@@ -732,9 +751,8 @@ public class ActorParticles : MonoBehaviour
 				if (bone != null)
 				{
 					EditorGUILayout.LabelField("Index: " + bone.Index.ToString(), GUILayout.Width(60f));
-					EditorGUILayout.LabelField("Length: " + bone.GetLength().ToString("F3"), GUILayout.Width(90f));
-					bone.Color = EditorGUILayout.ColorField(bone.Color);
 				}
+
 				if (Utility.GUIButton("Bone", bone == null ? UltiDraw.White : UltiDraw.DarkGrey, bone == null ? UltiDraw.DarkGrey : UltiDraw.White))
 				{
 					Transform[] bones = new Transform[Target.Bones.Length];
@@ -755,6 +773,17 @@ public class ActorParticles : MonoBehaviour
 					}
 				}
 				EditorGUILayout.EndHorizontal();
+				if (bone != null)
+				{
+					Target.Bones[bone.Index].Color1 = EditorGUILayout.ColorField("Color1", Target.Bones[bone.Index].Color1);
+					Target.Bones[bone.Index].Color2 = EditorGUILayout.ColorField("Color2", Target.Bones[bone.Index].Color2);
+					Target.Bones[bone.Index].Color3 = EditorGUILayout.ColorField("Color3", Target.Bones[bone.Index].Color3);
+					Target.Bones[bone.Index].Color4 = EditorGUILayout.ColorField("Color4", Target.Bones[bone.Index].Color4);
+					Target.Bones[bone.Index].startSize = EditorGUILayout.Slider("Start Size", Target.Bones[bone.Index].startSize, 0.0f, 1.0f); //FloatField("Start Size", Target.Bones[bone.Index].startSize);
+				}
+
+
+
 			}
 
 			for (int i = 0; i < transform.childCount; i++)
