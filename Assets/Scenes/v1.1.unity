@@ -256,7 +256,7 @@ Transform:
   - {fileID: 375595564}
   - {fileID: 1229611500}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315249721
 GameObject:
@@ -1689,7 +1689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1891,24 +1891,24 @@ MonoBehaviour:
   Bones:
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1816027884}
+    Transform: {fileID: 1816027882}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 0
     Parent: -1
-    Childs: 010000003a000000
+    Childs: 01000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
     Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
+    startSize: 0.2
+    rateOverDistance: 90
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1816027883}
+    Transform: {fileID: 1192305898}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 1
     Parent: 0
-    Childs: 02000000
+    Childs: 02000000060000000a000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -1917,7 +1917,7 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1816027882}
+    Transform: {fileID: 1192305897}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 2
     Parent: 1
@@ -1930,11 +1930,11 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305898}
+    Transform: {fileID: 1192305896}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 3
     Parent: 2
-    Childs: 04000000080000000c000000
+    Childs: 04000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -1943,7 +1943,7 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305897}
+    Transform: {fileID: 1192305895}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 4
     Parent: 3
@@ -1956,36 +1956,10 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305896}
+    Transform: {fileID: 1192305894}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 5
     Parent: 4
-    Childs: 06000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305895}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 6
-    Parent: 5
-    Childs: 07000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305894}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 7
-    Parent: 6
     Childs: 
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
@@ -1997,9 +1971,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305893}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 8
-    Parent: 3
-    Childs: 09000000
+    Index: 6
+    Parent: 1
+    Childs: 07000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2010,9 +1984,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305892}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 9
-    Parent: 8
-    Childs: 0a000000
+    Index: 7
+    Parent: 6
+    Childs: 08000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2023,9 +1997,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305891}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 10
-    Parent: 9
-    Childs: 0b000000
+    Index: 8
+    Parent: 7
+    Childs: 09000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2036,8 +2010,8 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305890}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 11
-    Parent: 10
+    Index: 9
+    Parent: 8
     Childs: 
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
@@ -2049,18 +2023,44 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305889}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 12
-    Parent: 3
-    Childs: 0d000000
+    Index: 10
+    Parent: 1
+    Childs: 0b000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
     Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
+    startSize: 0.2
+    rateOverDistance: 90
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305888}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 11
+    Parent: 10
+    Childs: 0c000000
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.2
+    rateOverDistance: 90
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305887}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 12
+    Parent: 11
+    Childs: 0d0000001600000018000000
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.2
+    rateOverDistance: 90
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305886}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 13
     Parent: 12
@@ -2073,11 +2073,11 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305887}
+    Transform: {fileID: 1192305885}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 14
     Parent: 13
-    Childs: 0f0000002200000027000000
+    Childs: 0f000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2086,7 +2086,7 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305886}
+    Transform: {fileID: 1192305884}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 15
     Parent: 14
@@ -2099,63 +2099,11 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305885}
+    Transform: {fileID: 1192305883}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 16
     Parent: 15
-    Childs: 11000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305884}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 17
-    Parent: 16
-    Childs: 12000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305883}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 18
-    Parent: 17
-    Childs: 1300000016000000190000001c0000001f000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305882}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 19
-    Parent: 18
-    Childs: 14000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305881}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 20
-    Parent: 19
-    Childs: 15000000
+    Childs: 1100000012000000130000001400000015000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2166,35 +2114,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305880}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 21
-    Parent: 20
+    Index: 17
+    Parent: 16
     Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305879}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 22
-    Parent: 18
-    Childs: 17000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305878}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 23
-    Parent: 22
-    Childs: 18000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2205,8 +2127,8 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305877}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 24
-    Parent: 23
+    Index: 18
+    Parent: 16
     Childs: 
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
@@ -2216,10 +2138,88 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305876}
+    Transform: {fileID: 1192305874}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 19
+    Parent: 16
+    Childs: 
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.1
+    rateOverDistance: 60
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305871}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 20
+    Parent: 16
+    Childs: 
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.1
+    rateOverDistance: 60
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305868}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 21
+    Parent: 16
+    Childs: 
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.1
+    rateOverDistance: 60
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305867}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 22
+    Parent: 12
+    Childs: 17000000
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.1
+    rateOverDistance: 60
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305866}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 23
+    Parent: 22
+    Childs: 
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.3
+    rateOverDistance: 90
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305862}
+    Velocity: {x: 0, y: 0, z: 0}
+    Index: 24
+    Parent: 12
+    Childs: 19000000
+    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
+    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
+    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
+    Color4: {r: 1, g: 0, b: 0, a: 1}
+    startSize: 0.1
+    rateOverDistance: 60
+  - Color: {r: 0, g: 0, b: 0, a: 0}
+    Actor: {fileID: 982172215}
+    Transform: {fileID: 1192305861}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 25
-    Parent: 18
+    Parent: 24
     Childs: 1a000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
@@ -2229,7 +2229,7 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305875}
+    Transform: {fileID: 1192305860}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 26
     Parent: 25
@@ -2242,232 +2242,11 @@ MonoBehaviour:
     rateOverDistance: 60
   - Color: {r: 0, g: 0, b: 0, a: 0}
     Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305874}
+    Transform: {fileID: 1192305859}
     Velocity: {x: 0, y: 0, z: 0}
     Index: 27
     Parent: 26
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305873}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 28
-    Parent: 18
-    Childs: 1d000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305872}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 29
-    Parent: 28
-    Childs: 1e000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305871}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 30
-    Parent: 29
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305870}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 31
-    Parent: 18
-    Childs: 20000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305869}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 32
-    Parent: 31
-    Childs: 21000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305868}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 33
-    Parent: 32
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305867}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 34
-    Parent: 14
-    Childs: 23000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305866}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 35
-    Parent: 34
-    Childs: 240000002500000026000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305865}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 36
-    Parent: 35
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305864}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 37
-    Parent: 35
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305863}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 38
-    Parent: 35
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305862}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 39
-    Parent: 14
-    Childs: 28000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305861}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 40
-    Parent: 39
-    Childs: 29000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305860}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 41
-    Parent: 40
-    Childs: 2a000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305859}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 42
-    Parent: 41
-    Childs: 2b0000002e000000310000003400000037000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305858}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 43
-    Parent: 42
-    Childs: 2c000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305857}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 44
-    Parent: 43
-    Childs: 2d000000
+    Childs: 1c0000001d0000001e0000001f00000020000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2478,35 +2257,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305856}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 45
-    Parent: 44
+    Index: 28
+    Parent: 27
     Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305855}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 46
-    Parent: 42
-    Childs: 2f000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305854}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 47
-    Parent: 46
-    Childs: 30000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2517,35 +2270,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305853}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 48
-    Parent: 47
+    Index: 29
+    Parent: 27
     Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305852}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 49
-    Parent: 42
-    Childs: 32000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305851}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 50
-    Parent: 49
-    Childs: 33000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2556,35 +2283,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305850}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 51
-    Parent: 50
+    Index: 30
+    Parent: 27
     Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305849}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 52
-    Parent: 42
-    Childs: 35000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305848}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 53
-    Parent: 52
-    Childs: 36000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2595,35 +2296,9 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305847}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 54
-    Parent: 53
+    Index: 31
+    Parent: 27
     Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305846}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 55
-    Parent: 42
-    Childs: 38000000
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305845}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 56
-    Parent: 55
-    Childs: 39000000
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
     Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
@@ -2634,21 +2309,8 @@ MonoBehaviour:
     Actor: {fileID: 982172215}
     Transform: {fileID: 1192305844}
     Velocity: {x: 0, y: 0, z: 0}
-    Index: 57
-    Parent: 56
-    Childs: 
-    Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
-    Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
-    Color3: {r: 1, g: 0.61960787, b: 0.023529412, a: 1}
-    Color4: {r: 1, g: 0, b: 0, a: 1}
-    startSize: 0.1
-    rateOverDistance: 60
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-    Actor: {fileID: 982172215}
-    Transform: {fileID: 1192305843}
-    Velocity: {x: 0, y: 0, z: 0}
-    Index: 58
-    Parent: 0
+    Index: 32
+    Parent: 27
     Childs: 
     Color1: {r: 0, g: 0.09411765, b: 1, a: 1}
     Color2: {r: 0.03137255, g: 0.89411765, b: 0.9529412, a: 1}
@@ -2657,89 +2319,8 @@ MonoBehaviour:
     startSize: 0.1
     rateOverDistance: 60
   startLifetime: 1
-  ParticleSystemsPrefab: {fileID: 4139205798318021646, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
+  ParticleSystemsPrefab: {fileID: 8698924662425179256, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
   ParticleSystems: []
---- !u!1001 &1057506676
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021635, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139205798318021646, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: m_Name
-      value: PS1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: endColor.b
-      value: 0.025157154
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: endColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: endColor.r
-      value: 0.19241925
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: startColor.b
-      value: 0.12792206
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: startColor.g
-      value: 0.12792206
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762822522885729574, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
-      propertyPath: startColor.r
-      value: 0.9245283
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6aa928e4597a300489db693c36609d8e, type: 3}
 --- !u!1 &1092115628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,7 +2427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2907,24 +2488,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305843 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4771823038517518596, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 578622006164409728, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305845 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 54091048155297781, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305846 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8471855986257238541, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305847 stripped
@@ -2932,29 +2498,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7041584707448431678, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305848 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4330462647343969, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305849 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2766743996073243483, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7072254084591262338, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305851 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -3638506872478732384, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305852 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4719092728854657098, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305853 stripped
@@ -2962,29 +2508,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -1399737524161520784, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305854 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2325443197170708393, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9044049179008591559, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5300007389968294512, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305857 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1293144668770829324, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305858 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8938473153567975996, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305859 stripped
@@ -3007,21 +2533,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5748685952332169647, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305863 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9172414168073808659, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305864 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1659481713845416717, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305865 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7716432909008760331, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -399668114847087817, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
@@ -3037,29 +2548,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4624381291129078587, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305869 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1172862094074119690, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305870 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7377019086014421943, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5206624606014519198, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305872 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1773612087857005415, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305873 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7158139483831290972, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305874 stripped
@@ -3067,44 +2558,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3445232295688257772, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305875 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8420566361822805487, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305876 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6160906967250711725, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1003455760751699527, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305878 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8962524429399926338, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305879 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8925222078809982777, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2119152736497926829, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305881 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6122322948324942913, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1192305882 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6893862832620085591, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1192305883 stripped
@@ -3257,16 +2718,6 @@ Transform:
 --- !u!4 &1816027882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8884612717867861691, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1816027883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1332871440923560990, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
-  m_PrefabInstance: {fileID: 1192305841}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1816027884 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c17eed2a5ea2904381b8ccd6b9064d6, type: 3}
   m_PrefabInstance: {fileID: 1192305841}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838826192
@@ -3621,3 +3072,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076772044}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &4740496392604852834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.252
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.273
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179253, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698924662425179256, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
+      propertyPath: m_Name
+      value: Trail
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 83015fd62a90c0f4ba076188c1c93de6, type: 3}
